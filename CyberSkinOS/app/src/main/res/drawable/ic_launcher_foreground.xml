@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- The Stellarite star on its orbit, sized for the adaptive-icon safe zone (a 66dp circle in the middle of 108dp) -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <group android:pivotX="54" android:pivotY="54" android:rotation="-28">
+        <path
+            android:pathData="M24,54 A30,12 0 1,0 84,54 A30,12 0 1,0 24,54"
+            android:strokeColor="@color/stellarite_teal_dark"
+            android:strokeWidth="1.6"
+            android:fillColor="#00000000" />
+        <path
+            android:pathData="M77,46.3 m-3.2,0 a3.2,3.2 0 1,0 6.4,0 a3.2,3.2 0 1,0 -6.4,0"
+            android:fillColor="@color/stellarite_lime" />
+    </group>
+    <path android:pathData="M54,24 L49.2,49.2 L54,54 Z" android:fillColor="@color/stellarite_teal" />
+    <path android:pathData="M54,24 L58.8,49.2 L54,54 Z" android:fillColor="@color/stellarite_teal_dark" />
+    <path android:pathData="M24,54 L49.2,49.2 L54,54 Z" android:fillColor="@color/stellarite_teal" />
+    <path android:pathData="M24,54 L49.2,58.8 L54,54 Z" android:fillColor="@color/stellarite_teal_dark" />
+    <path android:pathData="M84,54 L58.8,49.2 L54,54 Z" android:fillColor="@color/stellarite_lime" />
+    <path android:pathData="M84,54 L58.8,58.8 L54,54 Z" android:fillColor="@color/stellarite_olive" />
+    <path android:pathData="M54,84 L49.2,58.8 L54,54 Z" android:fillColor="@color/stellarite_lime" />
+    <path android:pathData="M54,84 L58.8,58.8 L54,54 Z" android:fillColor="@color/stellarite_olive" />
+    <path android:pathData="M54,51 L57,54 L54,57 L51,54 Z" android:fillColor="@color/stellarite_core" />
+</vector>

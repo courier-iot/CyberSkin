@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- One-colour star for Android 13 themed icons -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <group android:pivotX="54" android:pivotY="54" android:rotation="-28">
+        <path
+            android:pathData="M24,54 A30,12 0 1,0 84,54 A30,12 0 1,0 24,54"
+            android:strokeColor="#FFFFFFFF"
+            android:strokeWidth="1.6"
+            android:fillColor="#00000000" />
+    </group>
+    <path
+        android:pathData="M54,24 L58.8,49.2 L84,54 L58.8,58.8 L54,84 L49.2,58.8 L24,54 L49.2,49.2 Z"
+        android:fillColor="#FFFFFFFF" />
+</vector>

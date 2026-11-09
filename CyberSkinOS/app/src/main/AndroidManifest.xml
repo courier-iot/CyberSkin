@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Needed to list every installed app in the Databank (sideloaded APK, so this is fine) -->
+    <uses-permission android:name="android.permission.QUERY_ALL_PACKAGES" />
+    <!-- Needed for the Uninstall button in the long-press menu -->
+    <uses-permission android:name="android.permission.REQUEST_DELETE_PACKAGES" />
+    <!-- Only used by the Daylight cycle and Atmos widgets, and only after you tap to allow it -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <!-- Only used by the Atmos widget, to ask open-meteo.com for the forecast. Nothing else in CyberSkinOS goes online -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- Only used by the Schedule feed widget, and only after you tap Allow. The calendar is read on the phone and goes nowhere -->
+    <uses-permission android:name="android.permission.READ_CALENDAR" />
+    <!-- Only used by the Usage log widget. Android makes you switch on Usage access yourself; the figures are read on the phone and go nowhere -->
+    <uses-permission android:name="android.permission.PACKAGE_USAGE_STATS" tools:ignore="ProtectedPermissions" />
+    <!-- Lets the Timer widget ring with a notification. Asked once, the first time you start a countdown or alarm -->
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:label="@string/app_name"
+        android:theme="@style/Theme.CyberSkinOS">
+
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:launchMode="singleTask"
+            android:configChanges="orientation|screenSize|smallestScreenSize|screenLayout|keyboardHidden|uiMode"
+            android:stateNotNeeded="true"
+            android:resumeWhilePausing="true"
+            android:windowSoftInputMode="adjustPan"
+            android:taskAffinity="">
+            <!-- This is what makes Android offer it as a Home screen -->
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.HOME" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- Wakes up when a Timer countdown or alarm is due, so it can ring even if the launcher is closed -->
+        <receiver
+            android:name=".TimerReceiver"
+            android:exported="false" />
+
+        <!-- Lets CyberSkinOS appear under Notification access, so the Audio deck can show the current track.
+             It does nothing on its own and never reads your notifications. -->
+        <service
+            android:name=".MediaListenerService"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:permission="android.permission.BIND_NOTIFICATION_LISTENER_SERVICE">
+            <intent-filter>
+                <action android:name="android.service.notification.NotificationListenerService" />
+            </intent-filter>
+        </service>
+    </application>
+</manifest>

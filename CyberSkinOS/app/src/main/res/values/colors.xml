@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Stellarite Corporation colours -->
+    <color name="space">#FF060919</color>
+    <color name="stellarite_teal">#FF00B3A6</color>
+    <color name="stellarite_teal_dark">#FF00766C</color>
+    <color name="stellarite_lime">#FFC4FF00</color>
+    <color name="stellarite_olive">#FF84A300</color>
+    <color name="stellarite_core">#FFEFFFF8</color>
+</resources>

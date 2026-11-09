@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Deep space behind everything, so there is no white flash before the first frame is drawn -->
+    <style name="Theme.CyberSkinOS" parent="android:Theme.Material.NoActionBar">
+        <item name="android:windowBackground">@color/space</item>
+        <item name="android:statusBarColor">@color/space</item>
+        <item name="android:navigationBarColor">@color/space</item>
+        <item name="android:colorAccent">@color/stellarite_teal</item>
+        <item name="android:windowShowWallpaper">false</item>
+    </style>
+</resources>
